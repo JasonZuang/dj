@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>{{ object.breed }}</p>
+<p>{{ object.name }}</p>
+
+{{ object-list}}
+
+{{% for i in object-list %}}
+	<p> {{i.breed}} - {{i.name}} </p>
+{{% endfor %}}
+
+{% endblock %}

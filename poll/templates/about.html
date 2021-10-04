@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> About us <h1>
+
+<p>
+	{{my_text | title}}
+	
+</p>
+	{{my_html | safe}}
+<p>
+	<ul>
+	{% for i in my_list %}
+		{% if i == 3 %}
+			<li> THREEE {{i|add:3}}</li>
+		{% else %}
+			<li>{{forloop.counter}}-{{i}}</li>
+		{% endif %}
+	{% endfor %}
+	</ul>
+</p>
+{% endblock %}	
